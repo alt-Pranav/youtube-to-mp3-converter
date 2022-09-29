@@ -50,15 +50,14 @@ if vidLink:
     st.text("Converted video to mp3")
 
     os.remove(filename)
-    if vidName:
-        audioFile = vidName
+    
     
     # Defaults to 'application/octet-stream'
     with open(audioFile, "rb") as file:
         btn = st.download_button(
                 label="Download",
                 data=file,
-                file_name=audioFile,
+                file_name= audioFile[:5] ,
             )
 
     os.remove(audioFile)
