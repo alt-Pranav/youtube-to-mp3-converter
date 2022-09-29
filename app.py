@@ -35,6 +35,9 @@ st.title("YouTube to MP3 converter")
 # textbox used for getting video link
 st.subheader("Enter the video link below")
 vidLink = st.text_input("Enter Link: ")
+
+vidName = st.text_input("Enter save file name: ")
+
 if vidLink:
     
     # display converted mp3 file for download
@@ -47,6 +50,8 @@ if vidLink:
     st.text("Converted video to mp3")
 
     os.remove(filename)
+    if vidName:
+        audioFile = vidName
     
     # Defaults to 'application/octet-stream'
     with open(audioFile, "rb") as file:
