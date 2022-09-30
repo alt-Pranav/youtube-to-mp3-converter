@@ -44,7 +44,7 @@ if vidLink:
         btn = st.download_button(
                 label="Download",
                 data=file,
-                file_name= audioFile[:5] ,
+                file_name= audioFile ,
             )
 
     os.remove(audioFile)
