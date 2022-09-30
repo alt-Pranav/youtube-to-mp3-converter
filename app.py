@@ -16,19 +16,6 @@ def convert_to_mp3(filename):
     clip.close()
     return audioName
 
-def main(link):
-    try:
-        filename = download_video(link)
-        print("Downloaded video as " + filename)
-    except:
-        print("Not a valid link..")
-    try:
-        convert_to_mp3(filename)
-        print("Converted video to mp3")
-    except:
-        print("Error converting video to mp3")
-
-
 # Headings for Web App
 st.title("YouTube to MP3 converter")
 
